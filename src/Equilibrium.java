@@ -39,16 +39,15 @@ public class Equilibrium {
          }
          System.out.println();
         int count = 0;
-        int pivot =-1;
-        for (int i=1 ; i<n-1;i++){
+        for (int i=0 ; i<n;i++){
             if(left[i]==right[i]){
-                pivot=i;
                 System.err.println(i); 
                count++;
             }
         }
-
-        System.err.println(pivot); 
+        if(count==0){
+            System.out.print(-1);
+        }
         System.err.println("No. of equilibrium index :"+count);   
     }
 }
