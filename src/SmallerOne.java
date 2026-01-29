@@ -9,9 +9,11 @@ import java.util.Scanner;
 class SmallerOne{
     public static void main(String[] args) {
         Scanner src = new Scanner(System.in);
+        //Entering size of array 
         System.out.println("Enter no. of elements in array : ");
         int n = src.nextInt();
         int[] nums = new int[n];
+        //Find maximum value
         int max = Integer.MIN_VALUE;
         for (int i=0 ; i<n;i++){
             nums[i] = src.nextInt();
@@ -19,6 +21,7 @@ class SmallerOne{
                 max = nums[i];
             }
         }
+        //Count no. of elements greater than max
         int count = 0;
         for(int i=0;i<n;i++){
             if(nums[i]<max) {
