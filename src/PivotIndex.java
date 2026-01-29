@@ -1,13 +1,16 @@
 //given an array of intergers nums calculate the pivot index of this array 
 
 //The pivot index is the index where the sum of no.s stricly to the left to the index is equals to sum of all the no.s to the right -- if the index is on the left edge of the array then the left sum is 0 , if the index is on the left edge of the array the sum is 0 , because there are no elements on the left edge . this also applies to the right edge of the array . return the left most pivot index , if no such index exists return -1.
+//E.G. - 1 7 3 6 5 6 - PIVOT=3
+
+//right sum = pf[n-1] - pf[i]
 
 import java.util.Scanner;
 
 public class PivotIndex {
 
     public static void main(String[] args) {
-        //Approach 1 : Brute force (Time complexity :3n=n & space complexity = 3n=n)
+        //Approach 1 : Brute force (Time complexity :3n=n & space complexity = 2n=n)
         Scanner src = new Scanner(System.in);
         //Entering size of array 
         System.out.println("Enter no. of elements in array : ");
@@ -31,10 +34,11 @@ public class PivotIndex {
         for (int i=1 ; i<n-1;i++){
             if(left[i-1]==right[i+1]){
                 pivot=i;
+               break;
             }
         }
 
-        System.err.println(pivot);    
+        System.err.println(pivot); 
         
         //Approach 2: Efficient (Time Complexity = n & Spcae Complexity =1)
         
