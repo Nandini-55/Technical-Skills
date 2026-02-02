@@ -29,8 +29,5 @@ class SmallerOne{
             }
         }
         System.out.println(count);
-        
-
-
     }
 }
