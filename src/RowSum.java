@@ -1,15 +1,13 @@
 import java.util.Scanner;
 
-public class UpperBound {
+public class RowSum {
     public static void main(String[] args) {
         Scanner src = new Scanner(System.in);
         System.out.println("Enter no. of rows: ");
         int row = src.nextInt();
         System.out.println("Enter no. of columns:");
         int col = src.nextInt();
-        int mat[][] = new int[row][col];
-if(row==col){
-    
+        int mat[][] = new int[row][col];   
         //Read elements using nested loops
         System.out.println("Enter elements values : ");
         for(int i=0;i<row;i++){
@@ -17,22 +15,16 @@ if(row==col){
                 mat[i][j] = src.nextInt();
             }
         }
-
-        //calulate diagonal sums
-
-        int sum=0;
+        int[] rowSum = new int[row];
         for(int i=0;i<row;i++){
+            int sum=0;
             for(int j=0;j<col;j++){
-                if((i+j)> (2*i)){
-                   sum+=mat[i][j];
-                }
+                sum+=mat[i][j];
             }
+            rowSum[i] = sum;
         }
-
-        //print the sum
-        System.out.println("Upper Bound sum : "+ sum);
-}else{
-    System.out.println("Row and columns no. must be equal to calculate upper bound sum!");
-}
+        for(int i=0;i<row;i++){
+            System.out.print(rowSum[i]+" ");
+        }
     }
 }
