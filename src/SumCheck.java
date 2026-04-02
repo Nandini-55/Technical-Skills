@@ -31,6 +31,7 @@ public class SumCheck {
         }else{
             System.out.println("No");
         }
+        src.close();
 
     }
     

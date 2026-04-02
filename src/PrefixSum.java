@@ -18,6 +18,6 @@ public class PrefixSum {
         for (int i=0 ; i<n;i++){
             System.err.print(pre[i]+" ");
         }
-            
+            src.close();
         }
 }

@@ -24,5 +24,6 @@ public class PrintMatrix {
             }
             System.out.println();
         }
+        src.close();
     }
 }

@@ -24,5 +24,6 @@ public class ProductArray {
      for(int i=0;i<arr.length;i++){
         System.out.print(pro[i]+" ");
     }
+    src.close();
    }
 }

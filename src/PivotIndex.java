@@ -52,6 +52,6 @@ public class PivotIndex {
             left_sum+=nums[i];
         }
         System.err.println(pivot2);
-
+        src.close();
         }
 }

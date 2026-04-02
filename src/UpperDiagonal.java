@@ -8,31 +8,32 @@ public class UpperDiagonal {
         System.out.println("Enter no. of columns:");
         int col = src.nextInt();
         int mat[][] = new int[row][col];
-if(row==col){
-    
-        //Read elements using nested loops
-        System.out.println("Enter elements values : ");
-        for(int i=0;i<row;i++){
-            for(int j=0;j<col;j++){
-                mat[i][j] = src.nextInt();
-            }
-        }
+        if (row == col) {
 
-        //calulate diagonal sums
-
-        int sum=0;
-        for(int i=0;i<row;i++){
-            for(int j=0;j<col;j++){
-                if(i<j){
-                   sum+=mat[i][j];
+            // Read elements using nested loops
+            System.out.println("Enter elements values : ");
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < col; j++) {
+                    mat[i][j] = src.nextInt();
                 }
             }
-        }
 
-        //print the sum
-        System.out.println("Upper  Diagonal sum : "+ sum);
-}else{
-    System.out.println("Row and columns no. must be equal to calculate Upper  Diagonal sum!");
-}
+            // calulate diagonal sums
+
+            int sum = 0;
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < col; j++) {
+                    if (i < j) {
+                        sum += mat[i][j];
+                    }
+                }
+            }
+
+            // print the sum
+            System.out.println("Upper  Diagonal sum : " + sum);
+        } else {
+            System.out.println("Row and columns no. must be equal to calculate Upper  Diagonal sum!");
+        }
+        src.close();
     }
 }

@@ -46,23 +46,23 @@ class Queue {
         return val;
     }
 
-    public int peek() {
-        if (front > rear) {
-            System.out.println("Stack is empty. ");
-            return -1;
-        }
-        return q[front];
-    }
-
     public boolean isEmpty() {
         if (front > rear) {
             return true;
         }
         return false;
     }
+    
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty. ");
+            return -1;
+        }
+        return q[front];
+    }
 
     public void display() {
-        if (front > rear) {
+        if (isEmpty()) {
             System.out.println("Stack is empty. ");
             return;
         }

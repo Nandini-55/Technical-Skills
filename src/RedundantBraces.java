@@ -13,7 +13,6 @@ public class RedundantBraces {
         String a = src.next();
         Stack<Character> st = new Stack<>();
         int res = 0;
-        char last;
         for (int i = 0; i < a.length(); i++) {
             char ch = a.charAt(i);
             if (ch == ')') {
@@ -38,5 +37,6 @@ public class RedundantBraces {
         }else{
             System.out.println("Has Redundant braces");
         }
+        src.close();
     }
 }

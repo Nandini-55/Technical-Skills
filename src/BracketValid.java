@@ -33,5 +33,6 @@ public class BracketValid {
             res = 0;
         }
         System.out.println(res);
+        src.close();
     }
 }

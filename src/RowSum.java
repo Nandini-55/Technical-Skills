@@ -26,5 +26,6 @@ public class RowSum {
         for(int i=0;i<row;i++){
             System.out.print(rowSum[i]+" ");
         }
+        src.close();
     }
 }

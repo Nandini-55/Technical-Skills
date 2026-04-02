@@ -31,6 +31,6 @@ public class SecondLarge {
         System.out.println(-1);
     }
 
-    
+    src.close();
     }
 }

@@ -31,5 +31,6 @@ public static void main(String[] args) {
     }
 
     System.out.println(minTime);
+    src.close();
 }
 }

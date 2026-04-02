@@ -46,6 +46,7 @@ public class Rotate90 {
             System.out.println();
         }
 
+        src.close();
 
     }
 }

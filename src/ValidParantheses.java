@@ -45,6 +45,7 @@ public class ValidParantheses {
             res = 0;
         }
         System.out.println(res);
+        src.close();
 
     }
 }

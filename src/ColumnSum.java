@@ -22,6 +22,7 @@ public class ColumnSum {
         for(int i=0;i<col;i++){
             System.out.print(colSum[i]+" ");
         }
+        src.close();
 
     }
 }

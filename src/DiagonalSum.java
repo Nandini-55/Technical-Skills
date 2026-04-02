@@ -8,37 +8,38 @@ public class DiagonalSum {
         System.out.println("Enter no. of columns:");
         int col = src.nextInt();
         int mat[][] = new int[row][col];
-if(row==col){
-    
-        //Read elements using nested loops
-        System.out.println("Enter elements values : ");
-        for(int i=0;i<row;i++){
-            for(int j=0;j<col;j++){
-                mat[i][j] = src.nextInt();
-            }
-        }
+        if (row == col) {
 
-        //calulate diagonal sums
-
-        int left = 0;
-        int right =0; 
-
-        for(int i=0;i<row;i++){
-            for(int j=0;j<col;j++){
-                if(i==j){
-                    left+=mat[i][j];
-                }
-                if((i+j+1)== col){
-                    right+=mat[i][j];
+            // Read elements using nested loops
+            System.out.println("Enter elements values : ");
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < col; j++) {
+                    mat[i][j] = src.nextInt();
                 }
             }
-        }
 
-        //print the sum
-        System.out.println("First diagonal sum : "+ left);
-         System.out.println("Second diagonal sum : "+ right);
-}else{
-    System.out.println("Row and columns no. must be equal to calculate diagonals!");
-}
+            // calulate diagonal sums
+
+            int left = 0;
+            int right = 0;
+
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < col; j++) {
+                    if (i == j) {
+                        left += mat[i][j];
+                    }
+                    if ((i + j + 1) == col) {
+                        right += mat[i][j];
+                    }
+                }
+            }
+
+            // print the sum
+            System.out.println("First diagonal sum : " + left);
+            System.out.println("Second diagonal sum : " + right);
+        } else {
+            System.out.println("Row and columns no. must be equal to calculate diagonals!");
+        }
+        src.close();
     }
 }

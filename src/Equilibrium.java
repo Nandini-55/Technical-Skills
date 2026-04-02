@@ -18,13 +18,11 @@ public class Equilibrium {
         int[] nums = new int[n];
         int[] left=new int[n];
         int[] right=new int[n];
-
-        int total = 0;//for Approach 2
+        //for Approach 2
         //Input value in array 
         for (int i=0 ; i<n;i++){
             nums[i] = src.nextInt(); 
             left[i] = i==0?0:(left[i-1]+nums[i-1]);
-            total+=nums[i];
         }
 
         for (int i=n-1 ; i>=0;i--){
@@ -49,5 +47,6 @@ public class Equilibrium {
             System.out.print(-1);
         }
         System.err.println("No. of equilibrium index :"+count);   
+        src.close();
     }
 }

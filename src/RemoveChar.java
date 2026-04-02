@@ -40,6 +40,6 @@ public class RemoveChar {
 
         res.reverse();
         System.out.println(res);
-
+        src.close();
     }
 }

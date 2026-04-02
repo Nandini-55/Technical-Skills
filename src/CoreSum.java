@@ -25,6 +25,6 @@ public class CoreSum {
         }
 
         System.out.println("Sum of frame elements is : "+sum );
+        src.close();
     }
 }
- 

@@ -26,5 +26,6 @@ public class FrameSum{
         }
 
         System.out.println("Sum of frame elements is : "+sum );
+        src.close();
     }
 }
