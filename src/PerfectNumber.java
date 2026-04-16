@@ -25,11 +25,12 @@ public class PerfectNumber {
             StringBuilder temp = new StringBuilder(q.poll());
             String t = temp.toString();
             String palin = t;
-            palin +=temp.reverse();
-            System.out.print(palin+" ");
-            q.add(t+"1");
-            q.add(t+"2");
+            palin += temp.reverse();
+            System.out.print(palin + " ");
+            q.add(t + "1");
+            q.add(t + "2");
         }
 
+        src.close();
     }
 }
